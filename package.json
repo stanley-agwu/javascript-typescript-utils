@@ -1,0 +1,34 @@
+{
+  "name": "javascript-typescript-react-utils",
+  "version": "1.0.0",
+  "description": "Utility javascript and typescript functions and react custom hooks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stanley-agwu/javascript-typescript-utils.git"
+  },
+  "keywords": [
+    "javascript",
+    "typescript",
+    "react",
+    "hooks",
+    "functions"
+  ],
+  "author": "Stanley Agwu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stanley-agwu/javascript-typescript-utils/issues"
+  },
+  "homepage": "https://github.com/stanley-agwu/javascript-typescript-utils#readme",
+  "dependencies": {
+    "moment": "^2.29.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.7"
+  }
+}

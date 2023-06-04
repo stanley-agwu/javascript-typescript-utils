@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { CustomersForecastsRequest, ErrorType } from '@some-hypotetical-fetch-api-spec';
 import { getCustomersAccessForecasts } from 'services/api.ts';
 
-const useCustomersForecasts = (request: CustomersForecastsRequest, token: string) => {
+const useCustomersForecasts = (request: CustomersForecastsRequest, token: string, dependency?: any) => {
   const [customersFutureForecasts, setCustomersFutureForecasts] = useState<string[]>([]);
   const [errorState, setErrorState] = useState<ErrorType | null>(null);
 
@@ -18,7 +18,7 @@ const useCustomersForecasts = (request: CustomersForecastsRequest, token: string
         setErrorState(error.message)
       }
     })();
-  })
+  }, [dependency])
 
   return { customersFutureForecasts, errorState }
 };

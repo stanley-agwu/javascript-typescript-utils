@@ -19,7 +19,7 @@ export const useHover = <T extends HTMLElement | null>(): [
         node.removeEventListener('mouseout', handleMouseOut);
       }
     }
-    return null;
+    return () => {};
   },
   // eslint-disable-next-line react-hooks/exhaustive-deps
   [ref.current] // Recall only if ref changes

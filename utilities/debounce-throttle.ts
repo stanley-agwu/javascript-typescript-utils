@@ -1,10 +1,13 @@
 // Debounce
 function debounce(callback: Function, delay = 1000) {
-  let timeout: number | undefined;
+  let timeout: any;
 
   return (...args: IArguments[]) => {
-    clearTimeout(timeout);
+    if (timeout) {
+      clearTimeout(timeout);
+    }
     timeout = setTimeout(() => {
+      timeout = null;
       callback(...args);
     }, delay);
   }

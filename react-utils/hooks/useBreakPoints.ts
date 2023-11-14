@@ -1,8 +1,21 @@
 import { createContext, useEffect, useState } from "react";
-import { debounce } from 'lodash/debounce';
 
 export const mobileScreenMaxWidth = 768;
 export const tabletScreenMaxWidth = 991;
+
+export function debounce(fn: Function, timeout: number = 250) {
+  let timeoutId: any;
+  return wrapper;
+  function wrapper(...args: any[]) {
+    if(timeoutId) {
+      clearTimeout(timeoutId);
+    } 
+    timeoutId = setTimeout(() => {
+      timeoutId = null;
+      fn(...args);
+    }, timeout)
+  }
+}
 
 export const isMobile = () => window.innerWidth < mobileScreenMaxWidth;
 export const isTablet = () => {

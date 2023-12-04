@@ -35,6 +35,13 @@ const H = 8 / '40'; // { H: 0.2, type: 'number' }
 [3, 5, 6, 8].some((n) => n > 6); // true
 [1, 2, 3, 4].reverse(); // [4, 3, 2, 1]
 [3, 5, 7, 8].at(-2); // 7
+const arr1 = [1, 2, [3, 4]];
+arr1.flat(); // [1, 2, 3, 4]
+const arr2 = [1, 2, [3, 4, [5, 6]]];
+arr2.flat(); // [1, 2, 3, 4, [5, 6]]
+const arr3 = [1, 2, [3, 4, [5, 6]]];
+arr3.flat(2); // [1, 2, 3, 4, 5, 6]
+arr3.flat(Infinity); // [1, 2, 3, 4, 5, 6]
 
 dogs.toString();                        // convert to string: results "Bulldog,Beagle,Labrador"
 dogs.join(" * ");                       // join: "Bulldog * Beagle * Labrador"

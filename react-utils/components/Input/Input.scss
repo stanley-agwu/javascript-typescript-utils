@@ -1,0 +1,35 @@
+@import 'styles/main';
+
+@mixin inputFont {
+  font-family: $fontFamily;
+  font-size: $baseFontSize;
+  font-weight: $baseFontWeight;
+}
+
+.inputWrapper {
+  @include inputFont;
+
+  .inputLabel {
+    color: $fontColor;
+    display: block;
+    margin-bottom: $space * 0.5;
+  }
+
+  .input {
+    background: $greyBG;
+    border: 1px solid $borderColor;
+    color: $fontColor;
+    border-radius: 8px;
+    height: 48px;
+    padding: $space-2;
+    @include inputFont;
+  }
+
+  .disabled {
+    pointer-events: none;
+
+    input {
+      opacity: 0.5;
+    }
+  }
+}

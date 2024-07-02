@@ -1,0 +1,14 @@
+@import 'styles/main';
+
+button.negative:hover {
+  background-color: $c-negative-20;
+}
+
+.icon {
+  margin-right: $space-2;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+}

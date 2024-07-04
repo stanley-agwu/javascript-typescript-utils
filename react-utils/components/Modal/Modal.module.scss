@@ -1,0 +1,41 @@
+$modal-animation-transition: transform 0.5s ease-in-out;
+$overlay-animation-transition: opacity 0.3s ease-in-out;
+
+.ReactModal {
+  &__Overlay {
+    opacity: 0;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: $overlay-animation-transition;
+
+    &--after-open {
+      opacity: 1;
+    }
+
+    &--before-close {
+      opacity: 0;
+    }
+
+    &__Content {
+      transform: translate(-50%, 50%);
+      top: 50%;
+      left: 50%;
+      right: auto;
+      bottom: auto;
+      position: absolute;
+      margin-right: -50%;
+      transition: $modal-animation-transition;
+
+      &--after-open {
+        transform: translate(-50%, -50%);
+        transition: $modal-animation-transition;
+      }
+
+      &--before-close {
+        transform: translate(-50%, 50%);
+        transition: $modal-animation-transition;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import '~styles/main';
+
+div.search {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  margin-right: 0;
+
+  div:nth-child {
+    width: 100%;
+    input.t-input {
+      border: 0;
+    }
+  }
+}
+
+.results {
+  font-size: 14px;
+  line-height: 1.43;
+  color: $c-navy-80;
+  position: absolute;
+  width: calc(50% - #{$space-4});
+  z-index: 1;
+  margin-top: $space;
+  background-color: $c-neutral-20;
+  border-radius: $space;
+  padding: $space * 0.5 0;
+  border: 2px solid $c-neutral-60;
+  max-height: 308px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.result {
+  padding: $space * 0.5 $space-2;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    background-color: $c-neutral-40;
+  }
+}
+
+div.item {
+  width: 60px;
+}
+
+.close {
+  cursor: pointer;
+}
